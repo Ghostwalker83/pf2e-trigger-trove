@@ -3,7 +3,7 @@
     "triggers": [
         {
             "_id": "qFRjm1DiF2ye0nuX",
-            "name": "Remove Champion's Resistance",
+            "name": "Champion's Resistance (Remove Effect)",
             "nodes": [
                 {
                     "_id": "nOggEquouUTiOKnh",
@@ -44,7 +44,7 @@
         },
         {
             "_id": "4kTXa69928czX3l9",
-            "name": "Reduce Mountain Resilience's Duration",
+            "name": "Mountain Resilience (Reduce Duration)",
             "nodes": [
                 {
                     "_id": "E43uf8iRfdGSBWBY",
@@ -220,7 +220,7 @@
         },
         {
             "_id": "55BlQXKBJuKxR0Fp",
-            "name": "Roll Shields of the Spirit Damage",
+            "name": "Shields of the Spirit (Roll Damage)",
             "nodes": [
                 {
                     "_id": "5Ffw8tb8P1fX3zzQ",
