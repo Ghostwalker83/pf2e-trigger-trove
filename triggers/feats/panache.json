@@ -1,5 +1,8 @@
 [
   {
+    "_id":"FZ08u4pWhWpYBJQP",
+    "description": "<p>Automatically remove Panache on a Hitafter damage is dealt.</p>",
+    "folder": "Feats & Features",
     "name":"Panache Handler: Hit",
     "nodes":[
       {
@@ -12,19 +15,13 @@
         },
         "outputs":{
           "options":{
-            "ids":[
-              
-            ]
+            "ids":[]
           },
           "out":{
-            "ids":[
-              "i05KpLkLardN05Nh.inputs.in"
-            ]
+            "ids":["i05KpLkLardN05Nh.inputs.in"]
           },
           "other":{
-            "ids":[
-              "i05KpLkLardN05Nh.inputs.target"
-            ]
+            "ids":["i05KpLkLardN05Nh.inputs.target"]
           }
         }
       },
@@ -38,20 +35,14 @@
         },
         "inputs":{
           "in":{
-            "ids":[
-              "i05KpLkLardN05Nh.outputs.true"
-            ]
+            "ids":["i05KpLkLardN05Nh.outputs.true"]
           },
           "uuid":{
             "value":"Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj",
-            "ids":[
-              
-            ]
+            "ids":[]
           },
           "target":{
-            "ids":[
-              "2rczinPSElF4PgVj.outputs.output"
-            ]
+            "ids":["2rczinPSElF4PgVj.outputs.output"]
           }
         }
       },
@@ -82,9 +73,7 @@
         },
         "outputs":{
           "output":{
-            "ids":[
-              "iLV4EfwjTjcbh674.inputs.target"
-            ]
+            "ids":["iLV4EfwjTjcbh674.inputs.target"]
           }
         }
       },
@@ -98,32 +87,22 @@
         },
         "inputs":{
           "target":{
-            "ids":[
-              "LL6d3uVyc5hIonBZ.outputs.other"
-            ]
+            "ids":["LL6d3uVyc5hIonBZ.outputs.other"]
           },
           "option":{
             "value":"finisher",
-            "ids":[
-              
-            ]
+            "ids":[]
           },
           "in":{
-            "ids":[
-              "LL6d3uVyc5hIonBZ.outputs.out"
-            ]
+            "ids":["LL6d3uVyc5hIonBZ.outputs.out"]
           }
         },
         "outputs":{
           "true":{
-            "ids":[
-              "iLV4EfwjTjcbh674.inputs.in"
-            ]
+            "ids":["iLV4EfwjTjcbh674.inputs.in"]
           },
           "false":{
-            "ids":[
-              "oizbEbwVyrZbRsyx.inputs.in"
-            ]
+            "ids":["oizbEbwVyrZbRsyx.inputs.in"]
           }
         }
       },
@@ -143,10 +122,119 @@
           }
         }
       }
-    ],
-    "_id":"FZ08u4pWhWpYBJQP",
-    "description":"",
-    "folder":""
+    ],      
   },
   {
-    "name":"Panache Handler: Miss","nodes":[{"key":"attack-roll","type":"event","_id":"QNIpNjBKPmwdfDYJ","position":{"x":350,"y":200},"outputs":{"out":{"ids":["Q2STDdpdJBINWLPI.inputs.in"]},"outcome":{"ids":["WUznytPAwXiq5wKA.inputs.input"]}}},{"type":"condition","key":"has-option","_id":"Q2STDdpdJBINWLPI","position":{"x":549,"y":203.75},"inputs":{"in":{"ids":["QNIpNjBKPmwdfDYJ.outputs.out"]},"option":{"value":"finisher","ids":[]}},"outputs":{"true":{"ids":["WUznytPAwXiq5wKA.inputs.in"]},"false":{"ids":["mzSJv0fVdWuTGpXC.inputs.in"]}}},{"type":"splitter","key":"success-splitter","_id":"WUznytPAwXiq5wKA","position":{"x":802,"y":215.75},"inputs":{"in":{"ids":["Q2STDdpdJBINWLPI.outputs.true"]},"input":{"ids":["QNIpNjBKPmwdfDYJ.outputs.outcome"]}},"outputs":{"criticalFailure":{"ids":["z9Pws5Rn2DKodHVi.inputs.in"]},"failure":{"ids":["z9Pws5Rn2DKodHVi.inputs.in"]},"success":{"ids":["mzSJv0fVdWuTGpXC.inputs.in"]},"criticalSuccess":{"ids":["mzSJv0fVdWuTGpXC.inputs.in"]}}},{"type":"action","key":"remove-item","_id":"z9Pws5Rn2DKodHVi","position":{"x":1121,"y":196.75},"inputs":{"in":{"ids":["WUznytPAwXiq5wKA.outputs.criticalFailure","WUznytPAwXiq5wKA.outputs.failure"]},"uuid":{"value":"Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj","ids":[]}}},{"type":"action","key":"break-process","_id":"mzSJv0fVdWuTGpXC","position":{"x":1139,"y":369.75},"inputs":{"in":{"ids":["WUznytPAwXiq5wKA.outputs.success","WUznytPAwXiq5wKA.outputs.criticalSuccess","Q2STDdpdJBINWLPI.outputs.false"]}}}],"_id":"VKp9TVxibr1bEjOb","description":"","folder":""}],"items":[]}
+    "_id":"VKp9TVxibr1bEjOb",
+    "description":"<p>Automatically remove Panache on a Hitafter damage is dealt.</p>",
+    "folder":"Feats & Features"
+    "name":"Panache Handler: Miss",
+    "nodes":[
+      {
+        "key":"attack-roll",
+        "type":"event",
+        "_id":"QNIpNjBKPmwdfDYJ",
+        "position":{
+          "x":350,
+          "y":200
+        },
+        "outputs":{
+          "out":{
+            "ids":["Q2STDdpdJBINWLPI.inputs.in"
+            ]
+          },"outcome":{
+            "ids":["WUznytPAwXiq5wKA.inputs.input"]
+          }
+        }
+      },
+      {
+        "type":"condition",
+        "key":"has-option",
+        "_id":"Q2STDdpdJBINWLPI",
+        "position":{
+          "x":549
+          ,"y":203
+        },
+        "inputs":{
+          "in":{
+            "ids":["QNIpNjBKPmwdfDYJ.outputs.out"]
+          },
+          "option":{
+            "value":"finisher",
+            "ids":[]
+          }
+        },
+        "outputs":{
+          "true":{
+            "ids":["WUznytPAwXiq5wKA.inputs.in"]},
+          "false":{
+            "ids":["mzSJv0fVdWuTGpXC.inputs.in"]
+          }
+        }
+      },
+      {
+        "type":"splitter",
+        "key":"success-splitter",
+        "_id":"WUznytPAwXiq5wKA",
+        "position":{
+          "x":802,
+          "y":215
+        },
+        "inputs":{
+          "in":{
+            "ids":["Q2STDdpdJBINWLPI.outputs.true"]
+          },
+          "input":{
+            "ids":["QNIpNjBKPmwdfDYJ.outputs.outcome"]
+          }
+        },
+        "outputs":{
+          "criticalFailure":{
+            "ids":["z9Pws5Rn2DKodHVi.inputs.in"]
+          },
+          "failure":{
+            "ids":["z9Pws5Rn2DKodHVi.inputs.in"]
+          },
+          "success":{
+            "ids":["mzSJv0fVdWuTGpXC.inputs.in"]
+          },
+          "criticalSuccess":{
+            "ids":["mzSJv0fVdWuTGpXC.inputs.in"]
+          }
+        }
+      },
+      {
+        "type":"action",
+        "key":"remove-item",
+        "_id":"z9Pws5Rn2DKodHVi",
+        "position":{
+          "x":1121,
+          "y":196
+        },
+        "inputs":{
+          "in":{
+            "ids":["WUznytPAwXiq5wKA.outputs.criticalFailure","WUznytPAwXiq5wKA.outputs.failure"]
+          },
+          "uuid":{
+            "value":"Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj",
+            "ids":[]
+          }
+        }
+      },
+      {"type":"action",
+        "key":"break-process",
+        "_id":"mzSJv0fVdWuTGpXC",
+        "position":{
+          "x":1139,
+          "y":369
+        },
+        "inputs":{
+          "in":{
+            "ids":["WUznytPAwXiq5wKA.outputs.success","WUznytPAwXiq5wKA.outputs.criticalSuccess","Q2STDdpdJBINWLPI.outputs.false"]
+          }
+        }
+      }
+    ],
+ 
+  }
+]
