@@ -1,25 +1,25 @@
 [
     {
-        "_id": "FZ08u4pWhWpYBJQP",
-        "description": "<p>Automatically remove Panache on a Hitafter damage is dealt.</p>",
+        "_id": "SjD7rEF1hPWqmwGB",
+        "description": "<p>Remove Panache's effect when finisher damage is dealt.</p>",
         "folder": "Feats & Features",
-        "name": "Panache Handler: Hit",
+        "name": "Finisher (Damage Taken)",
         "nodes": [
             {
                 "_id": "LL6d3uVyc5hIonBZ",
                 "key": "damage-taken",
                 "outputs": {
                     "options": {
-                        "ids": []
+                        "ids": [
+                            "8x0w6okvFFkB9Kio.inputs.list"
+                        ]
                     },
                     "other": {
-                        "ids": [
-                            "i05KpLkLardN05Nh.inputs.target"
-                        ]
+                        "ids": []
                     },
                     "out": {
                         "ids": [
-                            "i05KpLkLardN05Nh.inputs.in"
+                            "8x0w6okvFFkB9Kio.inputs.in"
                         ]
                     }
                 },
@@ -34,7 +34,7 @@
                 "inputs": {
                     "in": {
                         "ids": [
-                            "i05KpLkLardN05Nh.outputs.true"
+                            "8x0w6okvFFkB9Kio.outputs.true"
                         ]
                     },
                     "target": {
@@ -49,8 +49,8 @@
                 },
                 "key": "remove-item",
                 "position": {
-                    "x": 897,
-                    "y": 198
+                    "x": 803,
+                    "y": 199
                 },
                 "type": "action"
             },
@@ -77,37 +77,32 @@
                     }
                 },
                 "position": {
-                    "x": 678,
+                    "x": 664,
                     "y": 344
                 },
                 "target": "LL6d3uVyc5hIonBZ.outputs.other",
                 "type": "variable"
             },
             {
-                "_id": "i05KpLkLardN05Nh",
+                "_id": "8x0w6okvFFkB9Kio",
                 "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "finisher"
+                    },
                     "in": {
                         "ids": [
                             "LL6d3uVyc5hIonBZ.outputs.out"
                         ]
                     },
-                    "option": {
-                        "ids": [],
-                        "value": "finisher"
-                    },
-                    "target": {
+                    "list": {
                         "ids": [
-                            "LL6d3uVyc5hIonBZ.outputs.other"
+                            "LL6d3uVyc5hIonBZ.outputs.options"
                         ]
                     }
                 },
-                "key": "has-option",
+                "key": "contains-entry",
                 "outputs": {
-                    "false": {
-                        "ids": [
-                            "oizbEbwVyrZbRsyx.inputs.in"
-                        ]
-                    },
                     "true": {
                         "ids": [
                             "iLV4EfwjTjcbh674.inputs.in"
@@ -115,48 +110,35 @@
                     }
                 },
                 "position": {
-                    "x": 600,
-                    "y": 200
+                    "x": 547.5,
+                    "y": 198.75
                 },
                 "type": "condition"
-            },
-            {
-                "_id": "oizbEbwVyrZbRsyx",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "i05KpLkLardN05Nh.outputs.false"
-                        ]
-                    }
-                },
-                "key": "break-process",
-                "position": {
-                    "x": 896,
-                    "y": 353
-                },
-                "type": "action"
             }
         ]
     },
     {
-        "_id": "VKp9TVxibr1bEjOb",
-        "description": "<p>Automatically remove Panache on a Hitafter damage is dealt.</p>",
+        "_id": "eFqdJDQVZDjOvjHa",
+        "description": "<p>Remove Panache's effect when a finisher misses. If the attack is rerolled into a success, grant Panache back to enable finisher damage.</p>",
         "folder": "Feats & Features",
-        "name": "Panache Handler: Miss",
+        "name": "Finisher (Attack Roll)",
         "nodes": [
             {
                 "_id": "QNIpNjBKPmwdfDYJ",
                 "key": "attack-roll",
                 "outputs": {
+                    "options": {
+                        "ids": [
+                            "N1Ci0e0tuy9HVAvv.inputs.list"
+                        ]
+                    },
                     "out": {
                         "ids": [
-                            "Q2STDdpdJBINWLPI.inputs.in"
+                            "N1Ci0e0tuy9HVAvv.inputs.in"
                         ]
                     },
                     "outcome": {
-                        "ids": [
-                            "WUznytPAwXiq5wKA.inputs.input"
-                        ]
+                        "ids": []
                     }
                 },
                 "position": {
@@ -166,87 +148,11 @@
                 "type": "event"
             },
             {
-                "_id": "Q2STDdpdJBINWLPI",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "QNIpNjBKPmwdfDYJ.outputs.out"
-                        ]
-                    },
-                    "option": {
-                        "ids": [],
-                        "value": "finisher"
-                    }
-                },
-                "key": "has-option",
-                "outputs": {
-                    "false": {
-                        "ids": [
-                            "mzSJv0fVdWuTGpXC.inputs.in"
-                        ]
-                    },
-                    "true": {
-                        "ids": [
-                            "WUznytPAwXiq5wKA.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 549,
-                    "y": 203
-                },
-                "type": "condition"
-            },
-            {
-                "_id": "WUznytPAwXiq5wKA",
-                "inputs": {
-                    "in": {
-                        "ids": [
-                            "Q2STDdpdJBINWLPI.outputs.true"
-                        ]
-                    },
-                    "input": {
-                        "ids": [
-                            "QNIpNjBKPmwdfDYJ.outputs.outcome"
-                        ]
-                    }
-                },
-                "key": "success-splitter",
-                "outputs": {
-                    "criticalFailure": {
-                        "ids": [
-                            "z9Pws5Rn2DKodHVi.inputs.in"
-                        ]
-                    },
-                    "criticalSuccess": {
-                        "ids": [
-                            "mzSJv0fVdWuTGpXC.inputs.in"
-                        ]
-                    },
-                    "failure": {
-                        "ids": [
-                            "z9Pws5Rn2DKodHVi.inputs.in"
-                        ]
-                    },
-                    "success": {
-                        "ids": [
-                            "mzSJv0fVdWuTGpXC.inputs.in"
-                        ]
-                    }
-                },
-                "position": {
-                    "x": 802,
-                    "y": 215
-                },
-                "type": "splitter"
-            },
-            {
                 "_id": "z9Pws5Rn2DKodHVi",
                 "inputs": {
                     "in": {
                         "ids": [
-                            "WUznytPAwXiq5wKA.outputs.criticalFailure",
-                            "WUznytPAwXiq5wKA.outputs.failure"
+                            "kMKocuTDpFTQJ7DZ.outputs.true"
                         ]
                     },
                     "uuid": {
@@ -255,27 +161,220 @@
                     }
                 },
                 "key": "remove-item",
+                "outputs": {
+                    "out": {
+                        "ids": []
+                    }
+                },
                 "position": {
-                    "x": 1121,
-                    "y": 196
+                    "x": 1014,
+                    "y": 92
                 },
                 "type": "action"
             },
             {
-                "_id": "mzSJv0fVdWuTGpXC",
+                "_id": "kMKocuTDpFTQJ7DZ",
                 "inputs": {
+                    "a": {
+                        "ids": [
+                            "6eycqLbIUICkEkHm.outputs.output"
+                        ]
+                    },
+                    "b": {
+                        "ids": [
+                            "8OpDE71cnCIAP7zy.outputs.value"
+                        ]
+                    },
                     "in": {
                         "ids": [
-                            "WUznytPAwXiq5wKA.outputs.success",
-                            "WUznytPAwXiq5wKA.outputs.criticalSuccess",
-                            "Q2STDdpdJBINWLPI.outputs.false"
+                            "N1Ci0e0tuy9HVAvv.outputs.true"
                         ]
                     }
                 },
-                "key": "break-process",
+                "key": "lte-number",
+                "outputs": {
+                    "false": {
+                        "ids": [
+                            "Q2MITdwMeIPtb5oh.inputs.in"
+                        ]
+                    },
+                    "true": {
+                        "ids": [
+                            "z9Pws5Rn2DKodHVi.inputs.in"
+                        ]
+                    }
+                },
                 "position": {
-                    "x": 1139,
-                    "y": 369
+                    "x": 791,
+                    "y": 215.25
+                },
+                "type": "logic"
+            },
+            {
+                "_id": "6eycqLbIUICkEkHm",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "number"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "kMKocuTDpFTQJ7DZ.inputs.a"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 683.5,
+                    "y": 402.25
+                },
+                "target": "QNIpNjBKPmwdfDYJ.outputs.outcome",
+                "type": "variable"
+            },
+            {
+                "_id": "8OpDE71cnCIAP7zy",
+                "inputs": {
+                    "input": {
+                        "ids": [],
+                        "value": "failure"
+                    }
+                },
+                "key": "success-value",
+                "outputs": {
+                    "value": {
+                        "ids": [
+                            "kMKocuTDpFTQJ7DZ.inputs.b"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 589.5,
+                    "y": 336.25
+                },
+                "type": "value"
+            },
+            {
+                "_id": "N1Ci0e0tuy9HVAvv",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "finisher"
+                    },
+                    "in": {
+                        "ids": [
+                            "QNIpNjBKPmwdfDYJ.outputs.out"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "QNIpNjBKPmwdfDYJ.outputs.options"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "kMKocuTDpFTQJ7DZ.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 550.5,
+                    "y": 198.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "Q2MITdwMeIPtb5oh",
+                "inputs": {
+                    "entry": {
+                        "ids": [],
+                        "value": "check:reroll"
+                    },
+                    "in": {
+                        "ids": [
+                            "kMKocuTDpFTQJ7DZ.outputs.false"
+                        ]
+                    },
+                    "list": {
+                        "ids": [
+                            "FXF8N0MdsRBZdDwz.outputs.output"
+                        ]
+                    }
+                },
+                "key": "contains-entry",
+                "outputs": {
+                    "true": {
+                        "ids": [
+                            "ECJWzjmLy3dyxJth.inputs.in"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 1006,
+                    "y": 269.75
+                },
+                "type": "condition"
+            },
+            {
+                "_id": "FXF8N0MdsRBZdDwz",
+                "custom": {
+                    "inputs": [],
+                    "outputs": [
+                        {
+                            "custom": false,
+                            "group": "",
+                            "key": "output",
+                            "type": "list"
+                        }
+                    ],
+                    "outs": []
+                },
+                "key": "variable-getter",
+                "outputs": {
+                    "output": {
+                        "ids": [
+                            "Q2MITdwMeIPtb5oh.inputs.list"
+                        ]
+                    }
+                },
+                "position": {
+                    "x": 851.5,
+                    "y": 353.25
+                },
+                "target": "QNIpNjBKPmwdfDYJ.outputs.options",
+                "type": "variable"
+            },
+            {
+                "_id": "ECJWzjmLy3dyxJth",
+                "inputs": {
+                    "duplicate": {
+                        "ids": [],
+                        "value": false
+                    },
+                    "in": {
+                        "ids": [
+                            "Q2MITdwMeIPtb5oh.outputs.true"
+                        ]
+                    },
+                    "uuid": {
+                        "ids": [],
+                        "value": "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj"
+                    }
+                },
+                "key": "create-item",
+                "position": {
+                    "x": 1253,
+                    "y": 270.75
                 },
                 "type": "action"
             }
